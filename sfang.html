@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: aquamarine;
+            font-size: large;
+            text-align: center;
+            flex-direction: column;
+            flex: initial;
+            flex-wrap: wrap;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+        }
+        span{
+            margin: 3mm;
+        }
+
+        /* div{} */
+    </style>
+    <script>
+        function countsf() {
+            //count
+            ton = document.getElementById("ton").value;
+            document.getElementById("result").innerHTML = (ton * 875) + 590000;
+            //copy
+
+        }
+        function copy() {
+            var str = document.getElementById('result').innerText;
+            var el = document.createElement('textarea');
+            el.value = str;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+        }
+    </script>
+
+<body>
+
+    <head>
+        پايه آهن اسفنجي
+    </head>
+    <div>
+        <form action="">
+            <span>تناز</span>
+            <input type="number" id="ton" onchange="countsf()">
+            <br>
+            <p>پايه : <br>
+                <span id="result"></span><br><br><input type="button" value="copy" onclick="copy()">
+
+        </form>
+        <br style="border:solid ;">
+    </div>
+<!--    <div class="container" style="background-color:rgb(196, 92, 228) ;;">
+        <div style="flex-item:1 ;">
+            <form action="">
+                <span>paye</span>
+                <input type="number" id="base">
+                <br><br> <span>total</span>
+                <input type="number" id="total">
+                <br><br> <span>neat</span>
+                <input type="number" id="neat">
+                <br> <br><span>extra</span>
+                <input type="number" id="extra">
+                <br> <br><span>bime</span>
+                <input type="number" id="bime">
+                <br>
+            </form>
+        </div>
+        <br style="border:solid ;">
+        <div style="-ms-flex-item:2; margin: 5mm;">
+            <form action="">
+                <input type="number" id="WEIGHT">
+                <br>
+
+                <span>bimep:</span><span id="bimep"></span>
+                <br>
+                <span>paye:  </span><span id="paye"></span><input type="button" value="copy" onclick="copy(paye)">
+                <br>
+                <span>bascol:</span><span id="bascol"></span><input type="button" value="copy" onclick="copy(bascol)">
+                <br>
+                <span>comision:</span><span id="comision">1515151</span><input type="button" value="copy" onclick="copy(comision)">
+                <br>
+            </form>
+        </div>
+    </div>-->
+</body>
+
+</html>
+</head>
